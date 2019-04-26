@@ -1,0 +1,82 @@
+﻿@model toletDb.usersModel
+@{
+    ViewBag.Title = "Users";
+}
+
+<div style="height:40vh;">
+
+
+
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">
+            <nav id="sidebar">
+
+
+                <ul class="list-unstyled components">
+                    <p>toletBD</p>
+                    <li class="">
+                        <a class="fa fa-user" href="/Home/Users">Account</a>
+
+                    </li>
+                    <li class="">
+                        <a class="fa fa-pencil" href="/Home/userAccount">updateAccount</a>
+
+                    </li>
+                    <li>
+                        <a class="fa fa-comments" href="/Home/meesage">massage</a>
+                    </li>
+
+                    <li>
+                        <a class="fa fa-bell" href="/Home/postAd">postAd</a>
+                    </li>
+                    <li>
+                        <a class="fa fa-level-down" href="#">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-10">
+            <div class="container">
+
+                <div class="well well-sm">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+                        </div>
+                        <div class="col-sm-6 col-md-8">
+                            <h4>
+                                @Model.name
+                            </h4>
+                            <small>
+                                <cite title="@Model.addresss">
+                                    @Model.addresss<i class="glyphicon glyphicon-map-marker">
+                                    </i>
+                                </cite>
+                            </small>
+                            <p>
+                                <i class="glyphicon glyphicon-envelope"></i>@Model.users_id
+                                <br />
+                                <i class="fa fa-phone"></i>@Model.phone_no
+                                
+                            </p>
+                            <!-- Split button -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary">
+                                    Social
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
